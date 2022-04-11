@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" defer ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" />
+
+    <meta property="og:title" content="Refugees in the US">
+    <meta property="og:description" content="US-bound refugees are not only from war-torn countries">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Donald_Trump_visits_San_Diego_border_wall_prototypes.jpg/512px-Donald_Trump_visits_San_Diego_border_wall_prototypes.jpg">
+    <meta name="twitter:card" content="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Donald_Trump_visits_San_Diego_border_wall_prototypes.jpg/512px-Donald_Trump_visits_San_Diego_border_wall_prototypes.jpg">
+    <meta name="twitter:creator" content="@hidaka_nao">
+    
+    <style>
+        body {
+            margin:auto;
+            padding:50px 10px;
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+        }
+
+        .serif {
+            font-family: 'Lora', serif;
+        }
+        .sans-serif {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        /* choose a light or dark theme to add to the body tag. */
+        .dark-theme {
+            background-color: #151515;
+            color: #fbfbfb;
+        }
+        .light-theme {
+            background-color: white;
+            color:#333;
+        }
+
+        .header {
+            padding-top:20px;
+            padding-bottom:20px;
+        }
+
+        .story-body, .header, .chart-section, .footer {
+            margin:auto;
+            max-width: 700px;
+        }
+
+
+		.top-picture {
+            margin:auto;
+            max-width: 700px;
+            align-content: center;
+        }
+
+        .footer {
+            padding-top:20px;
+            padding-bottom:20px;
+        }
+
+        .chart-section.wide{
+            width:100%;
+            max-width:1200px;
+        }
+
+        .chart-section.wide p.chart-title {
+            width:100%;
+            max-width:700px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        .chart-section.wide p.chart-subhead {
+            width:100%;
+            max-width:700px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+
+
+        /* text styles */
+
+        p.kicker {
+            font-size:1rem;
+            text-transform:uppercase;
+        }
+
+        .text-center {
+            text-align:center;
+        }
+
+        h1.headline {
+            font-size: 3rem;
+            line-height: 1.1;
+            margin-bottom: 0.25rem;
+            margin-top: 1rem;
+            font-weight: 800;
+        }
+
+        h2.subhead {
+            font-size: 1.4rem;
+            line-height: 2rem;
+            margin-bottom:0;
+            margin-top: 15px;
+            font-weight: 400;
+        }
+
+        p.body-text {
+            font-size: 1.1rem;
+            line-height: 1.4;
+            margin-top:0;
+            margin-bottom:15px;
+            color: #333;
+        }
+
+        h3.section-head {
+            font-size:2rem;
+            margin:40px 0 10px 0;
+            font-weight:700;
+            line-height:1.3;
+        }
+
+        .byline {
+            font-size: 1.1rem;
+            line-height: 0.75;
+            margin-top: 1.5rem;
+            font-weight: 500;
+            color:#666;
+        }
+
+        .date {
+            font-size: 0.85rem;
+            line-height: 1;
+            margin-top: 10px;
+            font-weight:400;
+            text-transform:uppercase;
+            letter-spacing:0.5px;
+            color:#666;
+        }
+
+
+        p.note {
+            font-size:0.85rem;
+        }
+
+        /* chart styles */
+
+        .chart-section {
+            width:100%;
+            max-width:700px;
+            padding:0px 0px;
+        }
+
+        .story-body .chart-section {
+            padding-top:0px;
+        }
+
+        
+        .chart-row {
+            display:flex;
+            /* justify-content: space-between; */
+            margin-top:0px;
+        }
+
+        p.chart-title {
+            font-size:1.3rem;
+            font-weight:700;
+            max-width:700px;
+            /* margin:0px auto 5px auto; */
+        }
+        p.chart-subhead {
+            margin:0 auto;
+            max-width:700px;
+            font-size:1rem;
+            margin-bottom:15px;
+        }
+
+        p.chart-label {
+            margin:0 0 5px 0;
+            font-size:0.85rem;
+            text-transform:uppercase;
+            font-weight:600;
+        }
+
+        .chart-row .chart {
+            width:100%;
+            padding-right:0 ;
+            min-width:calc(25% - 15px);
+
+        }
+
+
+
+        p.chart-source {
+            font-size:0.85rem;
+            margin:0;
+        }
+
+
+
+
+        /* photos */
+
+        .photo-section {
+            padding:30px 0px;
+            width:100%;
+            margin:auto;
+            display:flex;
+            max-width:1200px;
+        }
+
+        .photo {
+            width:100%;
+            padding-right:15px;
+        }
+        .photo img {
+            width:100%;	
+        }
+
+        p.caption {
+            font-size:0.9rem;
+            margin:0;
+        }
+
+
+
+        /* mobile */
+
+        @media (max-width:720px) {
+
+            .chart-row {
+                display:block;
+            }
+
+            .chart-row .chart {
+                padding:0;
+            }
+
+            .photo-section {
+                display:block;
+				margin-left: auto;
+               margin-right: auto;
+            }
+            .photo {
+                padding:0;
+            }
+
+        }
+    </style>
+ 
+
+
+<style>
+    .row-container {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      gap: 2em;
+    }
+    
+    .column-container {
+      flex-grow: 1;
+    }
+    
+    @media (max-width: 350px) {
+      .row-container {
+        flex-direction: column;
+      }
+    }
+    </style>
+    
+    <!-- google fonts: Open Sans (sans-serif) and Lora (serif) -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700&display=swap" rel="stylesheet">
+      
+    <title>Refugees in the US</title>
+    <link rel="icon" href="favicon.png">
+  </head>
+
+  <body class="light-theme"> <!-- all of the content on your html page goes inside the body -->
+
+    <div class="header">
+      <p class="kicker">Refugee</p>
+      <h1 class="headline">US-bound refugees are not only from war-torn countries
+    </h1>
+      <h2 class="subhead"></h2>
+      <p class="byline">By Nao hidaka Kato</p>
+      <p class="date">April 11, 2022</p>
+    </div>
+
+    <div class="top-picture">
+		<a title="Unknown authorUnknown author, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Donald_Trump_visits_San_Diego_border_wall_prototypes.jpg"><img width="512" alt="Donald Trump visits San Diego border wall prototypes" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Donald_Trump_visits_San_Diego_border_wall_prototypes.jpg/512px-Donald_Trump_visits_San_Diego_border_wall_prototypes.jpg"></a>
+		
+        <p><a href="https://commons.wikimedia.org/wiki/File:Donald_Trump_visits_San_Diego_border_wall_prototypes.jpg">Unknown authorUnknown author</a>, Public domain, via Wikimedia Commons</p>
+
+    </div>
+    
+    <br>
+    <br>
+    <div class="story-body">
+      <p class="body-text serif">In response to the hundreds of thousands of people who fled the country during the Ukrainian crisis, countries are preparing to accept displaced persons. Despite the fact that every government is obligated by international law to accept refugees, it is up to each government whether or not refugees can live in a safe environment. 
+
+ </p>
+		
+	<p class="body-text serif">Trump's previous administration had a reputation for being tough on refugees. For example, the administration was strongly criticized for its appalling treatment of refugees from Central America, including the separation of parents and children.
+    </p>
+
+      <p class="body-text serif"><a href="https://www.unhcr.org/refugee-statistics/download/">The UN High Commissioner for Refugees' data</a> shows that the United States has accepted refugees from many countries, but the nationalities and numbers vary by administration and time. Also, compared to neighboring countries such as Canada and Mexico, there are notable differences.
+    </p>
+
+	  <p class="body-text serif">
+        Methodology: Using UNHCR statistics, the number of people seeking asylum in the U.S., Canada, and Mexico and recognized by UNHCR as refugees to be given asylum is summarized in the charts below. Note that this statistic includes people with a background of being recognized as refugees (e.g., children of refugees born in the country of asylum who do not have citizenship), so the total number of refugees is larger than the actual number of refugees recognized by the governments of each country. See the detailed definition of refugees <a href="https://www.unhcr.org/refugee-statistics/methodology/">here.
+	</p>
+
+    <div class="flourish-embed flourish-bar-chart-race" data-src="visualisation/9355728"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+
+
+	<p class="body-text serif">
+        In 1988, when data were available for each country of origin, the largest group of refugees to the United States were those from Vietnam, where postwar turmoil continued. The refugees from the Soviet Union , which was to be dissolved in 1992, also recoded high. 
+    </p>
+
+
+    <p class="body-text serif">
+        Interestingly, there was an increase in the number of Ukrainian refugees in early 2000s. A likely reason is the political instability prior to the Orange Revolution (2014-2015), which was described by Russia as "<a href="https://www.kyivpost.com/article/content/eastern-europe/putin-calls-color-revolutions-an-instrument-of-des-118993.html">a well-tested scheme for destabilizing society</a>."
+    </p>
+
+    <p class="body-text serif">
+        Interestingly, there was an increase in the number of Ukrainian refugees in early 2000s. A likely reason is the political instability prior to the Orange Revolution (2014-2015), which was described by Russia as "<a href="https://www.kyivpost.com/article/content/eastern-europe/putin-calls-color-revolutions-an-instrument-of-des-118993.html">a well-tested scheme for destabilizing society</a>."
+    </p>
+
+    <p class="body-text serif"> 
+    Since 2016, the largest number of refugees have come from China. <a href ="https://www.economist.com/graphic-detail/2021/07/28/under-xi-jinping-the-number-of-chinese-asylum-seekers-has-shot-up">The Economist reported</a> that the number of Chinese refugees around the world has increased since 2012, when Xi Jinping took over as head of state. Another reason may be that at the time, the US was under the Trump administration, which was hostile to Xi.
+</p>
+
+
+    <div class="flourish-embed flourish-bar-chart-race" data-src="visualisation/9356646"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+
+
+
+
+
+	<p class="body-text serif">
+        On the other hand, in Canada, most refugees come from places where civil wars and insurgency movements have exacerbated security problems, such as Bosnia-Herzegovina in the 1990s and Sri Lanka and Afghanistan in the 2000s.
+	</p>
+
+
+    <p class="body-text serif">
+        It may seem surprising that the number of refugees from Turkey, a relatively stable country, has increased in recent years.
+        <a href="https://www.ctvnews.ca/canada/as-turks-flee-oppression-ottawa-urged-to-speak-out-on-human-rights-issues-1.4552418">Local reports indicate</a> that many Turks belonging to forces opposed to the current government were oppressed by the government and fled to Canada.
+
+	</p>
+
+    <div class="flourish-embed flourish-bar-chart-race" data-src="visualisation/9362139"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+
+	<p class="body-text serif">
+       
+
+	</p>
+
+	<p class="body-text serif">
+        From the 1980s to the present, Mexico has been the country of asylum for many refugees from Latin America, including El Salvador, Guatemala, and Honduras. Mexico is not always politically stable country, either, but applications for refugee status in Mexico have <a href="https://www.aljazeera.com/news/2021/12/21/refugee-requests-in-mexico-triple-in-2021">roughly tripled</a> in 2021 from the previous year. Many are presumably seeking asylum while waiting to try to get in the US. Mexico is not only the final destination of asylum seekers, but also <a href="https://www.npr.org/2019/06/19/734165446/the-recent-influx-of-african-asylum-seekers-is-taxing-social-services-in-maine">the gateway to the US</a>.
+        
+	</p>
+
+
+
+		<p class="footer">This story was done for Writing with Data, a class in the Columbia Journalism School. You can view source code for this project in the GitHub repository <a href="https://github.com/naokatoh/refugee-us">here.</a></p>
+
+	    </div>
+  </div> 
+</div> 
+</div>
+</div>
+</div>    
+
+
+  </body>
+</html>
