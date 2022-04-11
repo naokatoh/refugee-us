@@ -1,7 +1,7 @@
 # refugee-us
 
 - This is a repository for this [article](https://naokatoh.github.io/refugee-us/) 
-- Dataset: [UNHSR Refugee Data Finder] (https://naokatoh.github.io/sea_urchin/)
+- Dataset: [UNHSR Refugee Data Finder](https://www.unhcr.org/refugee-statistics/download/)
 - Visualization: Flourish 
 - USA (https://public.flourish.studio/visualisation/9355728/)
 - Canada (https://public.flourish.studio/visualisation/9356646/)
